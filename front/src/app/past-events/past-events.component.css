@@ -1,0 +1,15 @@
+.event-box{    
+    background: #fff;
+    padding: 0;
+    margin-left: 10px;
+    width: 99%;
+}
+.header{
+width: 100%;
+color: #fff;
+background-color: #005aa1;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+}

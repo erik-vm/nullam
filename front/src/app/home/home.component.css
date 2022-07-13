@@ -1,0 +1,15 @@
+.hero-text{
+    padding: 90px 40px;
+    background-color: #005aa1;
+    color: #fff;
+    line-height: 1.8rem;
+}
+
+.hero-img{
+    background-image: url(../../assets/UI_materjal/pilt.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.event-col{
+    padding: 0;
+}
