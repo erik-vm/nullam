@@ -13,3 +13,23 @@ justify-content: center;
 align-items: center;
 padding: 20px;
 }
+.btn-add{
+    background: transparent;
+    color: #000;
+    padding: 3px 10px;
+    margin: 10px;
+}
+.btn-remove{
+    height: 20px;
+    width: 20px;
+    background: url(../../assets/img/remove.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    background: #005aa1;
+    color: #fff;
+}

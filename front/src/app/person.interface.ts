@@ -5,5 +5,5 @@ export interface Person {
     personalIdCode: string;
     paymentMethod: string;
     description: string;
-    events: any[];
+    events: Event[];
 }

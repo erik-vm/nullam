@@ -13,8 +13,7 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-
-//Person services
+  //Person services
 
 addPerson(person : Person): Observable<unknown>{
   return this.http.post(`${this.baseUrl}/person/save`, person)

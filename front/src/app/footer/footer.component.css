@@ -1,4 +1,27 @@
-footer{
-    color: #fff;
+.footer{
+    padding: 40px;;
+    color: rgb(212, 212, 212);
     background-color: #373737;
+}
+table{
+    margin-top: 20px;
+}
+th{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+tr{
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 576px) {
+   
+   table{
+    text-align: center;
+    margin: 10px auto;
+   }
+   .last-column{
+    margin: -30px auto 0;
+   }
 }

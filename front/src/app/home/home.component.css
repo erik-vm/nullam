@@ -6,10 +6,25 @@
 }
 
 .hero-img{
-    background-image: url(../../assets/UI_materjal/pilt.jpg);
+    background-image: url(../../assets/img/pilt.jpg);
     background-size: cover;
     background-position: center;
 }
 .event-col{
     padding: 0;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .hero-text{
+        padding: 60px 40px;
+    }
+    .hero-img{
+      height: 40vh;
+    }
+}
+@media only screen and (max-width: 572px){
+    .hero-img{
+        height: 25vh;
+      }
 }

@@ -1,0 +1,35 @@
+.navbar{
+    background-color: rgb(255, 255, 255) !important;
+    padding: .5rem .5rem;
+}
+
+.logo{
+    height: 70px;
+    width: 150px;
+    background: url(../../assets/img/logo.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 100px;
+}
+
+.symbol{
+    height: 70px;
+    width: 70px;
+    background: url(../../assets/img/symbol.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-link:focus, .nav-link:hover, .nav-link:active{   background: #005aa2;
+    color: #fff;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .symbol{
+        display: none;
+    }
+}

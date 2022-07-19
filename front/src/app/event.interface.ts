@@ -1,9 +1,13 @@
+import { Company } from "./company.interface";
+import { Person } from "./person.interface";
+
 export interface Event {
     id: number;
     name: string;
     time: Date;
     location: string;
     description: string;
-    personParticipants: any[];
-    companyParticipants: any[];
+    totalParticipants: number;
+    personParticipants: Person[];
+    companyParticipants: Company[];
 }
