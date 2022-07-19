@@ -29,6 +29,8 @@ public class Event {
     private String location;
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
+    @Column(name = "total_participants")
+    private Integer totalParticipants;
     @JsonIgnore
     @ManyToMany(mappedBy = "events")
     private List<Person> personParticipants = new ArrayList<>();
@@ -42,6 +44,7 @@ public class Event {
         this.time = time;
         this.location = location;
         this.description = description;
+        this.totalParticipants = 0;
     }
 
 }

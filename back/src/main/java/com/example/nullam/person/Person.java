@@ -54,6 +54,7 @@ public class Person {
     public void registerToEvent(Event event){
         if (!this.events.contains(event)) {
             this.events.add(event);
+            event.setTotalParticipants(event.getTotalParticipants() + 1);
             event.getPersonParticipants().add(this);
         }
     }

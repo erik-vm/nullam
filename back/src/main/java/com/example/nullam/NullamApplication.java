@@ -2,20 +2,16 @@ package com.example.nullam;
 
 import com.example.nullam.company.Company;
 import com.example.nullam.company.CompanyRepository;
-import com.example.nullam.company.CompanyService;
 import com.example.nullam.event.Event;
 import com.example.nullam.event.EventRepository;
-import com.example.nullam.event.EventService;
 import com.example.nullam.paymentmethod.PaymentMethod;
 import com.example.nullam.person.Person;
 import com.example.nullam.person.PersonRepository;
-import com.example.nullam.person.PersonService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
@@ -60,18 +56,19 @@ public class NullamApplication {
 
             personRepository.saveAll(Arrays.asList(mihkel, uku));
 
-            Company nullam = new Company(1L, "Nullam OÜ", "70000622", 32,
+            Company nullam = new Company(1L, "Nullam OÜ", "70000622",
                     PaymentMethod.TRANSFER, "Medical company");
 
             companyRepository.save(nullam);
 
 
-            nullam.registerToEvent(medKoolitus);
-            nullam.registerToEvent(lasteKaitsepaev);
-            nullam.registerToEvent(suvePaevad);
+            nullam.registerToEvent(medKoolitus, 12);
+            nullam.registerToEvent(lasteKaitsepaev, 8);
+            nullam.registerToEvent(suvePaevad, 24);
 
             companyRepository.save(nullam);
 
+            eventRepository.saveAll(Arrays.asList(medKoolitus, suvePaevad, lasteKaitsepaev, eesti105));
 
         };
     }

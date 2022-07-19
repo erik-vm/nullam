@@ -24,11 +24,11 @@ public class Company {
     private String name;
     @Column(name = "company_reg_number", nullable = false, unique = true, length = 8, updatable = false)
     private String companyRegNumber;
-    @Column(name = "participants")
-    private Integer participants;
     @Column(name = "payment_method", nullable = false)
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;
+    @Column(name = "participants")
+    private Integer participants;
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
     @JsonIgnore
@@ -39,18 +39,20 @@ public class Company {
     )))
     private List<Event> events = new ArrayList<>();
 
-    public Company(Long id, String name, String companyRegNumber,Integer participants, PaymentMethod paymentMethod, String description) {
+    public Company(Long id, String name, String companyRegNumber, PaymentMethod paymentMethod, String description) {
         this.id = id;
         this.name = name;
         this.companyRegNumber = companyRegNumber;
-        this.participants = participants;
         this.paymentMethod = paymentMethod;
         this.description = description;
     }
 
-    public void registerToEvent(Event event){
+    public void registerToEvent(Event event, Integer participants){
         if (!this.events.contains(event)) {
             this.events.add(event);
+            this.participants = participants;
+            Integer totalParticipants = event.getTotalParticipants();
+            event.setTotalParticipants(totalParticipants + participants);
             event.getCompanyParticipants().add(this);
         }
     }
